@@ -1,5 +1,5 @@
-# Pruebas-React: Proyecto de Prueba con React y Webpack
-¡Bienvenido a Pruebas-React! Este es un proyecto de muestra creado para demostrar
+# Store-Simulation: Proyecto de Prueba con React y Webpack
+¡Bienvenido a Store-Simulation! Este es un proyecto de muestra creado para demostrar
 cómo configurar y ejecutar una aplicación básica de React utilizando Webpack. Sigue
 los pasos a continuación para poner en marcha el proyecto en tu máquina local.
 ## Requisitos Previos
