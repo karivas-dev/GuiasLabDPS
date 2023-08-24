@@ -45,6 +45,7 @@ export const Header = ({
                                     <div className='cart-product'
                                         key={product.id}>
                                         <div className='info-cart-product'>
+                                            <img className='smol-img' src={product.urlImage}/>
                                             <span className='cantidad-productocarrito'>
                                                 {product.quantity}
                                             </span>

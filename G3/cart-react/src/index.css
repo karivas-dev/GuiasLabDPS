@@ -136,6 +136,11 @@ header{
     display: none;
 }
 
+.smol-img{
+    height: 70px;
+    width: auto;
+}
+
 
 
 
