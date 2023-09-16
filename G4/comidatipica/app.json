@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "comidatipica",
+    "slug": "comidatipica",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "comidatipica"
+}
