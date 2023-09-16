@@ -6,7 +6,6 @@ import React, { useState, useEffect } from "react";
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from "react-native";
 import colors from "./src/utils/colors";
 import Form from "./src/components/Form";
-import Footer from "./src/components/Footer";
 import Result from "./src/components/Result";
 
 export default function App() {
@@ -36,7 +35,7 @@ export default function App() {
         isss: (isss).toFixed(2),
         afp: (afp).toFixed(2),
         renta: (renta).toFixed(2),
-        salarioNeto: (salary - isss - afp - renta).toFixed(2),
+        salarioNeto: (salary - (isss + afp + renta)).toFixed(2),
       });
     }
   };
@@ -48,7 +47,7 @@ export default function App() {
 
   return (
     <View style={{ width: '100%'}}>
-      <StatusBar barStyle={"light-centent"} />
+      <StatusBar barStyle={"light-content"} />
       <SafeAreaView style={styles.Header}>
         <Text style={styles.HeadApp}>Calculadora de salario</Text>
         <Form
@@ -63,7 +62,6 @@ export default function App() {
         totalNeto={total}
         errorMessage={errorMessage}
       />
-      <Footer calculate={calculate} />
     </View>
   );
 }

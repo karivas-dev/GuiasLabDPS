@@ -2,19 +2,20 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 export default function Result(props) {
   const { name, salary, totalNeto, errorMessage } = props;
+
   return (
     <View style={styles.content}>
       {totalNeto && (
         <View style={styles.boxResult}>
-          <Text style={styles.title}>RESUMEN</Text>
-          <DataResult title="Nombre: " value={{ name }}/>
-          <DataResult title="Salario:" value={`${ salary }`} />
-          <DataResult title="Descuento de ISSS:" value={`${ totalNeto.iss}`} />
-          <DataResult title="Descuento de AFP:" value={`${ totalNeto.afp}`} />
-          <DataResult title="Descuento de renta:" value={`${ totalNeto.renta}`} />
+          <Text style={styles.title}>DETALLE DE SALARIO</Text>
+          <DataResult title="Nombre: " value={`${ name }`}/>
+          <DataResult title="Salario:" value={`$ ${ salary }`} />
+          <DataResult title="Descuento de ISSS (3%):" value={`$ ${ totalNeto.isss}`} />
+          <DataResult title="Descuento de AFP (4%):" value={`$ ${ totalNeto.afp}`} />
+          <DataResult title="Descuento de renta (5%):" value={`$ ${ totalNeto.renta}`} />
           <DataResult
             title="Salario neto a recibir:"
-            value={`${totalNeto.salarioNeto} €`}
+            value={`$ ${ totalNeto.salarioNeto }`}
           />
         </View>
       )}
@@ -24,6 +25,7 @@ export default function Result(props) {
     </View>
   );
 }
+
 function DataResult(props) {
   const { title, value } = props;
   return (
@@ -33,6 +35,7 @@ function DataResult(props) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   content: {
     marginHorizontal: 40,

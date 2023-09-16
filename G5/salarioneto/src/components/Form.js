@@ -5,16 +5,15 @@ export default function Form(props) {
   const { setName, setSalary } = props;
   return (
     <View style={styles.viewForm}>
-      <View style={styles.viewInputs}>
+      <View>
         <TextInput
           placeholder="Nombre"
-          keyboardType="text"
           style={styles.input}
           onChange={(e) => setName(e.nativeEvent.text)}
         />
-
       </View>
-      <View style={styles.viewInputs}>
+      
+      <View>
         <TextInput
           placeholder="Salario base"
           keyboardType="numeric"
@@ -25,6 +24,7 @@ export default function Form(props) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   viewForm: {
     position: "absolute",
@@ -36,9 +36,7 @@ const styles = StyleSheet.create({
     height: 150,
     justifyContent: "center",
   },
-  viewInputs: {
-    flexDirection: "row",
-  },
+  
   input: {
     height: 50,
     backgroundColor: "#fff",
@@ -51,9 +49,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: "#000",
     paddingHorizontal: 20,
-  },
-  inputPercentage: {
-    width: "40%",
-    marginLeft: 5,
-  },
+  }
 });
