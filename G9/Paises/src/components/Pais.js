@@ -27,12 +27,21 @@ const Pais = ({ resultado, shortPais }) => {
         });
     });
 
+    function Flag ({ shortPais }) {
+        if (shortPais != null && shortPais.trim() != '') {
+            return <Image source={`https://flagcdn.com/h24/${shortPais}.png`} style={{width: 28, height: 24}}/>;
+        }
+    }
+
     return (
         <Card>
-            <Card.Title>{ nombre }</Card.Title>
+            <View style={{ flexDirection: "row", justifyContent: "center", }}>
+
+            <Flag shortPais={pais}/>
+            <Card.Title style={{ marginLeft:10, }}>{ nombre }</Card.Title>
+            </View>
             <Card.Divider/>
             <View style={{ justifyContent: "center" }}>
-                <Image source={`https://flagcdn.com/16x12/${pais}.png`}/>
                 <Text>Capital: { capital }</Text>
                 <Text>Región: { region }</Text>
                 <Text>Lengua: { lengua.toString() }</Text>
